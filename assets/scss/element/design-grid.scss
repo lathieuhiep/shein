@@ -1,0 +1,28 @@
+.element-design-grid {
+  .col {
+    margin-bottom: 24px;
+  }
+
+  .item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 50px 20px 12px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+      .title-post {
+        a {
+          font-size: 16px;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

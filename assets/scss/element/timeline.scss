@@ -1,0 +1,106 @@
+.element-timeline {
+  &__list {
+    display: grid;
+    grid-template-columns: 106px repeat(7, 1fr);
+    margin: 70px 0;
+    height: 6px;
+    list-style: none;
+    padding: 0;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #F6D365 0%, #FDA085 100%);
+
+    .item {
+      position: relative;
+
+      > div {
+        position: absolute;
+      }
+
+      .number {
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 6px solid $background-primary;
+        border-radius: 50%;
+        background-color: #ffffff;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include transform(translateX(-50%));
+
+        span {
+          position: relative;
+          display: block;
+          font-family: $font-family-second;
+          font-size: 20px;
+          color: #393939;
+          font-weight: 400;
+        }
+      }
+
+      .dots {
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 5px solid $background-primary;
+        background-color: #ffffff;
+        @include transform(translateX(-50%) translateY(-50%));
+      }
+
+      .text {
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+        color: #393939;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.5em;
+      }
+
+      &:nth-child(odd) {
+        .number {
+          top: -70px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: -12px;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid $background-primary;
+            @include transform(translateX(-50%));
+          }
+        }
+
+        .text {
+          bottom: -60px;
+        }
+      }
+
+      &:nth-child(even) {
+        .number {
+          bottom: -70px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            top: -12px;
+            left: 50%;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 8px solid $background-primary;
+            @include transform(translateX(-50%));
+          }
+        }
+
+        .text {
+          top: -60px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.site-footer {
+  color: $color-sub;
+  background-color: #171717;
+
+  .footer-widgets-block {
+    position: relative;
+    padding-top: 67px;
+    padding-bottom: 24px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      left: 240px;
+      right: 240px;
+      bottom: 0;
+      background-color: rgba(78, 78, 78, 0.5);
+    }
+  }
+
+  aside {
+    blockquote {
+      margin-bottom: 0;
+      padding-left: 32px;
+      padding-right: 10px;
+      border-left: 1px solid #F2A849;
+    }
+
+    &.widget_nav_menu {
+      padding-left: 12px;
+
+      ul {
+        margin-bottom: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          padding-left: 12px;
+          margin-bottom: 12px;
+
+          &:before {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 4px;
+            top: 50%;
+            left: 0;
+            border-radius: 50%;
+            background-color: #E7E7E7;
+            @include transform(translateY(-50%));
+          }
+
+          a {
+            display: inline-block;
+            color: #E7E7E7;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.widget_text {
+      .fanpage {
+        height: 140px;
+        border-radius: 4px;
+        background-color: #C4C4C4;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+
+        p {
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .site-info {
+    padding-top: 40px;
+    padding-bottom: 46px;
+
+    &__company {
+      margin-bottom: 8px;
+
+      .name {
+        color: #ffffff;
+        font-size: 22px;
+      }
+
+      .contact {
+        font-size: 18px;
+        @include flexbox();
+
+        .item {
+          strong {
+            color: #ffffff;
+          }
+
+          span {
+            color: #C7C7C7;
+            font-weight: 300;
+          }
+
+          a {
+            color: $color-hover;
+          }
+
+          &:not(:first-child) {
+            &:before {
+              content: "-";
+              padding-left: 10px;
+              padding-right: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .copyright {
+      color: $color-sub;
+    }
+  }
+}

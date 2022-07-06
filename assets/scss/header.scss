@@ -1,0 +1,145 @@
+.header {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__banner {
+    a {
+      display: block;
+    }
+  }
+
+  &__middle {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr auto 1fr;
+    background-color: #f7f8fa;
+
+    .left {
+      @include flexbox();
+
+      .navbar {
+        padding: 0;
+
+        ul {
+          @include flexbox();
+
+          li {
+            @include flex(0 0 auto);
+          }
+        }
+      }
+    }
+
+    .logo {
+      height: 70px;
+      @include flexbox();
+      @include align-items(center);
+    }
+
+    .right {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr auto;
+
+      .notice {
+        @include flexbox();
+        @include align-items(center);
+
+        &__item {
+          width: 60%;
+          margin: 0 0 0 auto;
+
+          a {
+            color: rgb(213, 51, 48);
+            font-size: 12px;
+          }
+        }
+      }
+
+      .info {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+
+        &__box {
+          position: relative;
+          padding: 0 5px;
+          @include transition();
+
+          > a {
+            height: 100%;
+            @include flexbox();
+            @include align-items(center);
+          }
+          .sub {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            min-width: 168px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.08);
+            @include transition();
+
+            li {
+              margin-bottom: 8px;
+
+              a {
+                display: block;
+                font-size: 12px;
+                text-transform: capitalize;
+                line-height: normal;
+                color: rgba(0,0,0,0.6);
+                white-space: nowrap;
+
+                &:hover {
+                  color: $color-hover;
+                }
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #ffffff;
+
+            .sub {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+
+        &__user {
+          .sub {
+            li {
+              &:first-child {
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+
+                a {
+                  color: rgba(0,0,0,0.8);
+                  font-weight: 700;
+
+                  &:hover {
+                    color: $color-primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

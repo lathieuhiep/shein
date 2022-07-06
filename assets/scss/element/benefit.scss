@@ -1,0 +1,42 @@
+.element-benefit {
+  .item {
+    position: relative;
+    padding: 24px 20px 52px;
+    border: 5px solid $border-color;
+    height: 100%;
+
+    .stt {
+      position: absolute;
+      right: -8px;
+      top: 0;
+      display: block;
+      font-family: $font-family-second;
+      font-weight: 500;
+      font-size: 100px;
+      color: $color-hover;
+      line-height: 100px;
+      margin-top: 50px;
+      padding-top: 30px;
+      padding-bottom: 60px;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+
+    .desc {
+      padding-right: 50px;
+      font-size: 14px;
+    }
+  }
+
+  .col {
+    margin-bottom: 24px;
+
+    &:first-child {
+      .item {
+        .stt {
+          right: -26px;
+        }
+      }
+    }
+  }
+}

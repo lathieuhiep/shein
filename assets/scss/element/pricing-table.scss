@@ -1,0 +1,185 @@
+.element-pricing-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 8px;
+
+  .item {
+    padding: 32px 12px 32px 22px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    @include transition();
+
+    .top {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 7px;
+
+      p {
+        margin: 0;
+      }
+
+      .price {
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 900;
+        color: $color-title;
+        @include transition();
+      }
+
+      .price-value {
+        color: #868686;
+        @include transition();
+
+        span {
+          display: inline-block;
+        }
+
+        .currency {
+          font-family: $font-family-second;
+          font-size: 20px;
+          font-weight: 500;
+          @include transform(translateY(-12px));
+        }
+
+        .acreage {
+          position: relative;
+          margin-left: 3px;
+          padding-left: 3px;
+          font-family: $font-family-second;
+          font-size: 16px;
+          font-weight: 400;
+
+          &:before {
+            position: absolute;
+            content: "";
+            top: -5px;
+            left: 0;
+            width: 1px;
+            height: 21px;
+            background-color: #868686;
+            @include transform(rotate(45deg) translateY(5px));
+            @include transition();
+          }
+        }
+      }
+    }
+
+    .name {
+      margin-bottom: 12px;
+      font-size: 18px;
+      @include transition();
+    }
+
+    .desc {
+      margin-bottom: 27px;
+      font-size: 14px;
+      line-height: 1.5em;
+      @include transition();
+    }
+
+    ul {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.5em;
+        @include flexbox();
+        @include transition();
+
+        span {
+          display: inline-block;
+
+          &.icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: rgba(194, 158, 67, 0.1);
+            @include transition();
+
+            i {
+              color: $color-hover;
+              @include transition();
+            }
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .registration {
+      display: block;
+      padding: 10px 15px 9px;
+      overflow: hidden;
+      font-size: 14px;
+      font-weight: 900;
+      text-align: center;
+      color: $color-hover;
+      text-transform: uppercase;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 30px;
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #000000;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 42px 34px rgba(194, 158, 67, 0.3);
+      background-color: $background-primary;
+      @include transform(translateY(-30px));
+
+      .top {
+        .price {
+          color: #ffffff;
+        }
+
+        .price-value {
+          color: #ffffff;
+
+          .acreage {
+            &:before {
+              background-color: #ffffff;
+            }
+          }
+        }
+      }
+
+      .name,
+      .desc {
+        color: #ffffff;
+      }
+
+      ul {
+        li {
+          color: #ffffff;
+
+          span {
+            &.icon {
+              background-color: rgba(255,255,255,0.1);
+
+              i {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+
+      .registration {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

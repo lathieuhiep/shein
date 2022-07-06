@@ -1,0 +1,349 @@
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaLight.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaLight.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-Aguda.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-Aguda.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-Aguda.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaBold.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBold.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaBlack.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBlack.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff2') format('woff2'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff') format('woff'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('assets/fonts/helvetica-neue/HelveticaNeue.woff2') format('woff2'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue.woff') format('woff'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  outline: none !important;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.63em;
+  overflow-x: hidden;
+  font-size: 16px;
+  color: $color-primary;
+  font-family: $font-family-text;
+  font-weight:400;
+  word-break: break-word;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.sticky-footer {
+  flex: 1 0 auto;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+
+  > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  color: $color-title;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  @include transition();
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+p {
+  margin: 0 0 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.element-section {
+  background-color: #ffffff;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.row-custom {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.col-custom {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title-element {
+  margin-bottom: 40px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.title-custom {
+  font-size: 22px;
+}
+
+.space {
+  margin: 35px 0;
+  height: 1px;
+  background-color: #DDDDDD;
+}
+
+.owl-carousel {
+  .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+
+    .owl-dot {
+      margin: 0 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      @include transition();
+
+      &.active,
+      &:hover {
+        background-color: $background-primary;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.hide-nav-default {
+  .lSAction {
+    a {
+      width: auto;
+      height: auto;
+      color: #ffffff;
+      font-size: 30px;
+      opacity: 1;
+      background-image: none;
+      @include transition();
+
+      &.lSPrev {
+        left: 16px;
+      }
+
+      &.lSNext {
+        right: 16px;
+      }
+
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}
+
+.lSSlideOuter {
+  .lSPager {
+    &.lSGallery {
+      li {
+        overflow: hidden;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        @include transition();
+
+        img {
+          width: 100%;
+          max-width: none;
+        }
+
+        &.active,
+        &:hover {
+          border-color: $border-color;
+        }
+      }
+    }
+  }
+}
+
+.chat-group {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  z-index: 99;
+  @include transform(translateY(-50%));
+
+  a {
+    display: block;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      @include transform(scale(1.1));
+    }
+  }
+}
+
+.group-action-mobile {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+
+  .box {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto repeat(2, 1fr);
+    grid-gap: 6px;
+    margin: 0 auto;
+    @include align-items(flex-end);
+
+    a {
+      display: inline-block;
+
+      span {
+        display: block;
+        color: #666666;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      &.phone {
+        @include transform(translateY(-16px));
+      }
+    }
+  }
+}

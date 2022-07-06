@@ -1,0 +1,22 @@
+.element-image-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 35px 20px;
+
+  .item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 16px;
+
+    &__box {
+      .title {
+        margin-bottom: 12px;
+        font-size: 18px;
+      }
+
+      .desc {
+        font-size: 14px;
+      }
+    }
+  }
+}

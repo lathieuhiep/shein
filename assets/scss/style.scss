@@ -1,0 +1,89 @@
+/*
+Theme Name: EdenLuxuryDesign
+Theme URI: https://getdesign.edu.vn/
+Author: lathieuhiep
+Author URI: https://www.facebook.com/lathieuhiep
+Version: 1.0.0
+Description: EdenLuxuryDesign HTML
+*/
+
+/**
+* Table of Contents:
+*
+# General
+# Header
+# Breadcrumb
+# Element
+ ## Banner
+ ## Project Tabs
+ ## About
+ ## Service
+ ## Price List
+ ## Video Post
+ ## Team Member
+ ## Image Box
+ ## Post Grid
+ ## Partner
+ ## Subscribe
+ ## About Text
+ ## Benefit
+ ## FAQ
+ ## Post Detail
+ ## Design Grid
+ ## Pricing Table
+ ## Timeline
+ ## Contact
+# Project Detail
+# Blog
+# Page
+# Footer
+# Responsive
+* -----------------------------------------------------------------------------
+*/
+
+@import "variables/variables";
+
+/**
+# General
+-----------------------------------------------------------------------------*/
+@import "general";
+
+/**
+# Header
+-----------------------------------------------------------------------------*/
+@import "header";
+
+/**
+# Breadcrumb
+-----------------------------------------------------------------------------*/
+@import "breadcrumb";
+
+/**
+# Element
+-----------------------------------------------------------------------------*/
+@import "element/element";
+
+/**
+# Project Detail
+-----------------------------------------------------------------------------*/
+@import "project-detail";
+
+/**
+# Blog
+-----------------------------------------------------------------------------*/
+@import "blog";
+
+/**
+# Page
+-----------------------------------------------------------------------------*/
+@import "page";
+
+/**
+# Footer
+-----------------------------------------------------------------------------*/
+@import "footer";
+
+/**
+# Responsive
+-----------------------------------------------------------------------------*/
+@import "responsive";

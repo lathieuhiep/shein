@@ -1,0 +1,29 @@
+.element-team-member {
+  .item {
+    &__thumb {
+      margin-bottom: 18px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    &__info {
+      margin-bottom: 18px;
+
+      .name {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .position {
+        color: $color-hover;
+        font-size: 14px;
+      }
+    }
+
+    &__desc {
+      font-size: 15px;
+    }
+  }
+}
