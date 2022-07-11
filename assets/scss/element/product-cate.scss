@@ -1,0 +1,70 @@
+/* Element Product Category */
+.element-product-cate {
+  .list-cate {
+    .col {
+      margin-bottom: 12px;
+    }
+
+    .item {
+      position: relative;
+      padding: 25px;
+      background-color: #e8e8e8;
+
+      .link-cate {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      &__box {
+        text-align: center;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        @include align-items(center);
+
+        .thumbnail {
+          img {
+            display: inline-block;
+          }
+        }
+
+        .name-cate {
+          margin: 0;
+          font-weight: 500;
+          font-family: $font-family-second ;
+        }
+      }
+    }
+  }
+
+  .list-cate-kid {
+    .col {
+      margin-bottom: 12px;
+    }
+
+    .item {
+      .thumbnail {
+        display: block;
+        margin-bottom: 12px;
+      }
+      .name-cate {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .list-cate-image {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(6, 1fr);
+
+    &.life {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}

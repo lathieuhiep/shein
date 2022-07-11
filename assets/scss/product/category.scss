@@ -1,0 +1,394 @@
+/* Product Category */
+.template-product-cate {
+  .top-info {
+    padding: 24px;
+    background-color: #f6f6f6;
+
+    .title {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .list-tags {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          position: relative;
+          display: inline-block;
+          margin-right: 12px;
+          margin-bottom: 12px;
+          padding: 6px 12px;
+          cursor: pointer;
+          border: 1px solid rgba(0,0,0,.2);
+          @include transition();
+
+          &:hover,
+          &:active {
+            border-color: #000000;
+          }
+
+          &:before {
+            position: absolute;
+            content: "";
+            top: -8px;
+            right: -2px;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: visible;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 12px solid $background-primary;
+            @include transform(rotate(-45deg));
+            @include transition();
+          }
+
+          &:after {
+            position: absolute;
+            content: "\e5cd";
+            top: -4px;
+            right: 1px;
+            opacity: 0;
+            visibility: visible;
+            color: #ffffff;
+            font-size: 8px;
+            font-family: 'Material Icons Outlined', serif;
+            @include transition();
+          }
+
+          &.active {
+            &:before,
+            &:after {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sort-bar {
+    cursor: pointer;
+
+    &__inner {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: auto 160px;
+      @include align-items(center);
+
+      .title {
+        margin: 0 12px 0 0;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .sort-product {
+        position: relative;
+
+        .select-only {
+          position: relative;
+          padding: 4px 12px;
+          border: 1px solid #E5E5E5;
+
+          &:after {
+            position: absolute;
+            content: "\e5cf";
+            top: 50%;
+            right: 10px;
+            font-size: 16px;
+            font-family: "Material Icons Outlined", serif;
+            @include transform(translateY(-50%));
+            @include transition();
+          }
+        }
+
+        .sort-list {
+          position: absolute;
+          top: 90%;
+          left: 0;
+          right: 0;
+          height: 212px;
+          overflow-y: auto;
+          list-style: none;
+          margin: 0;
+          padding: 8px 0;
+          opacity: 0;
+          visibility: visible;
+          background-color: #ffffff;
+          box-shadow: 0 1px 4px 3px rgba(0,0,0,8%);
+          @include transition();
+
+          li {
+            position: relative;
+            padding: 8px 12px;
+            @include transition();
+
+            &:after {
+              position: absolute;
+              content: "\e5ca";
+              top: 50%;
+              right: 6px;
+              opacity: 0;
+              font-family: "Material Icons Outlined", serif;
+              @include transition();
+              @include transform(translateY(-50%));
+            }
+
+            &:hover {
+              background-color: #f6f6f6;
+            }
+
+            &.active {
+              font-weight: 700;
+
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .select-only {
+            &:after {
+              @include transform(translateY(-50%) rotate(180deg));
+            }
+          }
+
+          .sort-list {
+            top: 110%;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .product-list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 205px 1fr;
+
+    &__filter {
+      .filter-product-box {
+        position: sticky;
+        top: 16px;
+        height: 561px;
+        padding-right: 6px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #cccccc rgba(255,255,255,0);
+
+        /* Works on Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #cccccc;
+          border-radius: 20px;
+          border: 3px solid transparent;
+        }
+
+        .filter-product-item {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .group-box-filter {
+            height: 130px;
+            overflow: hidden;
+          }
+
+          .filter-product-toggle {
+            position: relative;
+            margin-bottom: 12px;
+            cursor: pointer;
+
+            &:after {
+              position: absolute;
+              content: "\e145";
+              top: 50%;
+              right: 0;
+              font-size: 18px;
+              color: $color-title;
+              font-family: "Material Icons Outlined", serif;
+              @include transform(translateY(-50%));
+              @include transition();
+            }
+
+            .title {
+              margin-bottom: 0;
+              padding-right: 16px;
+              font-size: 14px;
+            }
+
+            &.active {
+              &:after {
+                content: "\e15b";
+              }
+            }
+          }
+
+          .list-filter {
+            &:not(.show) {
+              display: none;
+            }
+          }
+
+          .filter-view-more {
+            margin-top: 8px;
+            cursor: pointer;
+            @include flexbox();
+            @include align-items(center);
+
+            .icon {
+              margin-right: 8px;
+              font-size: 16px;
+            }
+          }
+
+          .price-range {
+            padding-right: 12px;
+
+            &__box {
+              padding: 10px 0;
+              margin-bottom: 8px;
+            }
+
+            .ui-widget {
+              &.ui-widget-content {
+                height: 2px;
+                border: none;
+                background-color: #ccc;
+              }
+
+              .ui-widget-header {
+                background-color: $background-primary;
+              }
+
+              .ui-slider-handle {
+                margin-left: 0;
+                top: 50%;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 1px solid #e5e5e5;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+                background-color: #ffffff;
+                @include transform(translateY(-50%));
+              }
+            }
+
+            &__prices {
+              display: grid;
+              grid-gap: 6px;
+              grid-template-columns: repeat(2, 1fr);
+
+              .right {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      .list-product {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+
+        .item {
+          .thumbnail {
+            margin-bottom: 12px;
+          }
+
+          .title-product {
+            font-size: 12px;
+          }
+
+          .product-action-info {
+            display: grid;
+            grid-gap: 8px;
+            grid-template-columns: 1fr auto;
+
+            i {
+              font-size: 16px;
+              cursor: pointer;
+              @include transition();
+
+              &:hover {
+                color: #fa6338;
+              }
+            }
+          }
+
+          .price {
+            .amount {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .navigation {
+        .total-page {
+          display: inline-block;
+          margin-right: 16px;
+          color: #959595;
+
+        }
+        .pagination {
+          margin: 0;
+
+          li {
+            margin: 0 6px;
+
+            a,span {
+              display: block;
+              cursor: pointer;
+              width: 24px;
+              height: 24px;
+              line-height: 24px;
+              text-align: center;
+              color: $color-title;
+              padding: 0;
+              border: 0;
+              border-radius: 50%;
+              @include transition();
+
+              &:hover,
+              &.active {
+                color: #ffffff;
+                background-color: #000000;
+              }
+            }
+
+            a {
+              font-size: 16px;
+              font-weight: 700;
+            }
+
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

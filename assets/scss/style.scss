@@ -15,27 +15,10 @@ Description: EdenLuxuryDesign HTML
 # Breadcrumb
 # Element
  ## Banner
- ## Project Tabs
- ## About
- ## Service
- ## Price List
- ## Video Post
- ## Team Member
- ## Image Box
- ## Post Grid
- ## Partner
- ## Subscribe
- ## About Text
- ## Benefit
- ## FAQ
- ## Post Detail
- ## Design Grid
- ## Pricing Table
- ## Timeline
- ## Contact
-# Project Detail
-# Blog
-# Page
+ ## Product Category
+ ## Product Sale
+## Page Product
+  ## Product Category
 # Footer
 # Responsive
 * -----------------------------------------------------------------------------
@@ -54,29 +37,16 @@ Description: EdenLuxuryDesign HTML
 @import "header";
 
 /**
-# Breadcrumb
------------------------------------------------------------------------------*/
-@import "breadcrumb";
-
-/**
 # Element
 -----------------------------------------------------------------------------*/
-@import "element/element";
+@import "element/event";
+@import "element/product-cate";
+@import "element/product-sale";
 
 /**
-# Project Detail
+# Page Product
 -----------------------------------------------------------------------------*/
-@import "project-detail";
-
-/**
-# Blog
------------------------------------------------------------------------------*/
-@import "blog";
-
-/**
-# Page
------------------------------------------------------------------------------*/
-@import "page";
+@import "product/category";
 
 /**
 # Footer
