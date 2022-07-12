@@ -1,10 +1,613 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Icon Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <!-- Light slider -->
+    <link href="assets/css/lightslider.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <title>Shein-Product Detail</title>
 </head>
 <body>
+<div class="sticky-footer">
+    <!-- Header -->
+    <header class="header">
+        <div class="header__banner">
+            <a href="#">
+                <img src="assets/images/header/header-banner.webp" alt="banner">
+            </a>
+        </div>
 
+        <div class="header__middle">
+            <div class="left">
+                <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="index.html">Nữ</a>
+                        </li>
+
+                        <li>
+                            <a href="plus-size.html">Plus Size</a>
+                        </li>
+
+                        <li class="active">
+                            <a href="tre-em.html">Trẻ Em</a>
+                        </li>
+
+                        <li>
+                            <a href="nam.html">Nam</a>
+                        </li>
+
+                        <li>
+                            <a href="doi-song.html">Đời Sống</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="logo">
+                <img src="assets/images/header/logo.png">
+            </div>
+
+            <div class="right">
+                <div class="notice">
+                    <div class="notice__item d-none">
+                        <a href="shipping-info.html" target="_blank">
+                            Vận chuyển tiêu chuẩn miễn phí  cho đơn hàng trên 230.000₫
+                        </a>
+                    </div>
+
+                    <div class="notice__item d-none">
+                        <a href="coupon.html" target="_blank">
+                            GIẢM 70K <span>ĐH ĐẦU TIÊN TỪ 700K</span>
+                        </a>
+                    </div>
+
+                    <div class="notice__item d-none">
+                        <a href="cash-on-delivery.html" target="_blank">
+                            THANH TOAN KHI NHẬN HÀNG
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <div class="info__box info__user">
+                        <a href="#">
+                            <i class="material-icons-outlined">person</i>
+                        </a>
+
+                        <ul class="sub">
+                            <li>
+                                <a href="#">Đăng nhập / Đăng kí</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Đơn hàng của tôi</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Tin nhắn của tôi</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Phiếu giảm giá của tôi</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Điểm thưởng của tôi</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Đã xem gần đây</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Nhiều dịch vụ hơn</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info__box info__cart">
+                        <a href="#" >
+                            <i class="material-icons-outlined">shopping_bag</i>
+                            <span class="number">0</span>
+                        </a>
+                    </div>
+
+                    <div class="info__box info__wishlist">
+                        <a href="#">
+                            <i class="material-icons-outlined">favorite_border</i>
+                            <span class="number">0</span>
+                        </a>
+                    </div>
+
+                    <div class="info__box info__services">
+                        <a href="#">
+                            <i class="material-icons-outlined">headset_mic</i>
+                        </a>
+                    </div>
+
+                    <div class="info__box info__currency">
+                        <a href="#">
+                            <i class="material-icons-outlined">language</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <div class="left">
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="index.html">Sale</a>
+                        </li>
+
+                        <li>
+                            <a href="plus-size.html">Trang phục</a>
+                        </li>
+
+                        <li>
+                            <a href="tre-em.html">Đồ lót & đồ mặc nhà</a>
+                        </li>
+
+                        <li>
+                            <a href="nam.html">Đồ đi biển</a>
+                        </li>
+
+                        <li>
+                            <a href="doi-song.html">Giày dép & phụ kiện</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right">
+                <form class="search-box" method="get" action="">
+                    <input type="search" class="form-control control-search" placeholder="" aria-label="Search" />
+
+                    <button type="submit" class="btn-submit">
+                        <i class="material-icons-outlined">search</i>
+                    </button>
+
+                    <div class="search-content">
+                        <h4 class="title">
+                            Tìm kiếm gần đây
+                        </h4>
+
+                        <div class="history-words">
+                            <a href="#">Crop Top</a>
+                        </div>
+
+                        <h4 class="title title-hot">
+                            Tìm kiếm hot nhất
+                        </h4>
+
+                        <div class="hot-words">
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Crop Top</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Bikini</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Áo hai dây</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Jeans</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Matermity</span>
+                            </a>
+
+                            <a href="#">
+                                <i class="material-icons-outlined">local_fire_department</i>
+                                <span>Bodysuit</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="warp template-product-detail pb-5 pt-3 pb-5">
+        <div class="container">
+            <!-- breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="product-category.html">Quần áo nữ</a></li>
+                    <li class="breadcrumb-item"><a href="product-category.html">Denim nữ</a></li>
+                    <li class="breadcrumb-item"><a href="product-category.html">Quần jean nữ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">DAZY Quần jean nữ Nút Túi Hem thô màu trơn</li>
+                </ol>
+            </nav>
+
+            <div class="content-warp">
+                <div class="product">
+                    <div class="product__main row">
+                        <div class="col-1 col-sm-6 col-lg-7">
+                            <div class="gallery">
+                                <ul class="product-gallery-item">
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+
+                                    <li data-thumb="assets/images/placeholder-1280x850.png" data-src="assets/images/placeholder-1280x850.png">
+                                        <img src="assets/images/placeholder-1280x850.png" alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-1 col-sm-6 col-lg-5">
+                            <div class="information">
+                                <h1 class="product-title">
+                                    DAZY Quần jean nữ Nút Túi Hem thô màu trơn
+                                </h1>
+
+                                <div class="product-intro">
+                                    <div class="product-intro__meta">
+                                        <span class="sku">SKU: sw2203027412280926</span>
+                                    </div>
+
+                                    <div class="product-intro__rating">
+                                        <div class="star-rating">
+                                            <i class="material-icons-outlined">star</i>
+                                            <i class="material-icons-outlined">star</i>
+                                            <i class="material-icons-outlined">star</i>
+                                            <i class="material-icons-outlined">star</i>
+                                            <i class="material-icons-outlined">star_half</i>
+                                        </div>
+                                        (<a href="#revies">15 nhận xét</a>)
+                                    </div>
+                                </div>
+
+                                <div class="product-price">
+                                    <ins>151.800<span class="currency">đ</span></ins>
+                                    <del>200.000<span class="currency">đ</span></del>
+                                </div>
+
+                                <div class="product-flash-sale">
+                                    <span>Tiết kiệm: ₫5.800 - ₫29.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back top -->
+<div class="back-top">
+    <i class="material-icons-outlined">expand_less</i>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__top">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-6">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col">
+                            <aside class="widget widget-nav-menu">
+                                <h3 class="widget__title">
+                                    THÔNG TIN CÔNG TY
+                                </h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">Giới Thiệu SHEIN</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Chương Trình Affiliate</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Blogger Thời Trang</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+
+                        <div class="col">
+                            <aside class="widget widget-nav-menu">
+                                <h3 class="widget__title">
+                                    HỖ TRỢ KHÁCH HÀNG
+                                </h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">Phí Vận Chuyển</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Trả Lại</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Hướng Dẫn Đặt Hàng</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Làm Thế Nào Để Theo Dõi</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Hướng Dẫn Kích Thước</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Trách Nhiệm Xã Hội</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">SHEIN VIP</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+
+                        <div class="col">
+                            <aside class="widget widget-nav-menu">
+                                <h3 class="widget__title">
+                                    DỊCH VỤ KHÁCH HÀNG
+                                </h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">Liên Hệ Chúng Tôi</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Phương Thức Thanh Toán</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Điểm Thưởng</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <aside class="widget widget-social-network">
+                                <h3 class="widget__title">
+                                    KẾT NỐI VỚI CHÚNG TÔI
+                                </h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/facebook.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/instagram.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/twitter.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/youtube.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/pinterest.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/snapchat.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/tiktok.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+
+                        <div class="col-12 col-md-4 mb-4">
+                            <aside class="widget widget-social-network">
+                                <h3 class="widget__title">
+                                    APP
+                                </h3>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/apple.png" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img src="assets/images/icon/android.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+
+                        <div class="col-12 mb-5">
+                            <aside class="widget widget-subscribe">
+                                <h3 class="widget__title">
+                                    ĐĂNG KÝ NHẬN TIN TỪ SHEIN
+                                </h3>
+
+                                <form class="form-subscribe">
+                                    <input type="email" class="form-control" placeholder="Địa chỉ email của bạn" aria-label="">
+
+                                    <button type="submit" class="btn btn-dark">
+                                        ĐĂNG KÝ
+                                    </button>
+                                </form>
+                            </aside>
+                        </div>
+
+                        <div class="col-12">
+                            <aside class="widget widget-payment">
+                                <h3 class="widget__title">
+                                    CHÚNG TÔI CHẤP NHẬN
+                                </h3>
+
+                                <div class="payment-list">
+                                    <img src="assets/images/icon/cod.png" alt="">
+                                    <img src="assets/images/icon/visa.png" alt="">
+                                    <img src="assets/images/icon/master-card.png" alt="">
+                                    <img src="assets/images/icon/maestro.png" alt="">
+                                    <img src="assets/images/icon/american-express.png" alt="">
+                                    <img src="assets/images/icon/jcb.png" alt="">
+                                    <img src="assets/images/icon/paypal.png" alt="">
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="coppy-right">
+                        ©2009-2022 SHEIN bảo lưu tất cả các quyền
+                    </div>
+
+                    <div class="menu-footer">
+                        <ul>
+                            <li>
+                                <a href="#">Trung tâm bảo mật</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Chính sách bảo mật & Cookie</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Điều khoản và Điều kiện</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Thông báo về Bản quyền</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Dấu ấn</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Vietnam</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="link-image">
+                        <a href="#">
+                            <img src="assets/images/trust-wave.png" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="assets/images/dma.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Jquery JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Owl Carousel JS -->
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<!-- Light slider -->
+<script type="text/javascript" src="assets/js/lightslider.min.js"></script>
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>

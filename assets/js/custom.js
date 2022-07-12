@@ -8,7 +8,7 @@
     $(document).ready(function () {
 
         /* Start back top */
-        $('#back-top').on('click', function (e) {
+        $('.back-top').on('click', function (e) {
             e.preventDefault();
             $('html').scrollTop(0);
         });
@@ -196,6 +196,39 @@
             $('#price-range-upper').text( priceRange.slider("values", 1) );
         }
 
+        // product detail gallery
+        const productGalleryItem = $('.product-gallery-item');
+        if ( productGalleryItem.length ) {
+            productGalleryItem.lightSlider({
+                gallery: true,
+                item: 1,
+                loop: true,
+                thumbItem: 6,
+                slideMargin: 0,
+                enableDrag: true,
+            });
+        }
+
+    });
+
+    // scroll event
+    let timer_clear;
+
+    $( window ).scroll( function() {
+        if ( timer_clear ) clearTimeout(timer_clear);
+
+        timer_clear = setTimeout( function() {
+            /* Start scroll back top */
+            let $scrollTop = $(this).scrollTop();
+
+            if ( $scrollTop > 200 ) {
+                $('.back-top').addClass('active');
+            }else {
+                $('.back-top').removeClass('active');
+            }
+            /* End scroll back top */
+
+        }, 100 );
     });
 
     // function call owlCarousel

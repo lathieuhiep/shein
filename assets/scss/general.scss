@@ -409,3 +409,25 @@ input[type="search"]::-webkit-search-results-decoration {
 .breadcrumb {
   padding: 0 12px;
 }
+
+.back-top {
+  position: fixed;
+  right: 6px;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  color: #ffffff;
+  line-height: 36px;
+  text-align: center;
+  background: #333;
+  @include transition();
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 6px;
+  }
+}

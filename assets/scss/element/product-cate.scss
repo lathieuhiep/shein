@@ -68,3 +68,62 @@
     }
   }
 }
+
+.element-housewares {
+  .col {
+    margin-bottom: 24px;
+  }
+
+  .item {
+    position: relative;
+
+    &__content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 12px;
+      display: grid;
+      grid-gap: 6px;
+      grid-template-columns: 1fr auto;
+      background-color: rgba(0,0,0,0.5);
+      @include align-items(center);
+
+      .tile {
+        margin: 0;
+        color: #ffffff;
+      }
+
+      i {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+    }
+
+    &__link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &.room {
+    .item {
+      &__content {
+        padding: 24px 12px;
+        grid-template-columns: 1fr;
+        background-color: #4b6739;
+
+        .tile {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
