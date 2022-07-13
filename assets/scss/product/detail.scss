@@ -1,0 +1,205 @@
+/* Product Detail */
+.template-product-detail {
+  .information {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #e5e5e5;
+
+    .product-title {
+      font-size: 18px;
+    }
+
+    .product-intro {
+      margin-bottom: 12px;
+      color: $color-link;
+
+      > div {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+
+      &__rating {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: auto 1fr;
+
+        a {
+          color: $color-star;;
+        }
+      }
+    }
+
+    .product-price {
+      margin-bottom: 12px;
+      @include flexbox();
+      @include align-items(center);
+
+      i {
+        margin-right: 6px;
+        color: $color-star;
+      }
+
+      ins {
+        font-size: 22px;
+      }
+
+      del {
+        font-size: 14px;
+      }
+    }
+
+    .product-flash-sale {
+      margin-bottom: 22px;
+      padding-left: 24px;
+      color: $color-text;
+
+      span {
+        display: inline-block;
+
+        &.text {
+          margin-right: 6px;
+        }
+
+        &.discount {
+          width: 44px;
+          height: 18px;
+          text-align: center;
+          line-height: 18px;
+          color: $color-title;
+          font-size: 12px;
+          background-color: $color-star;
+        }
+      }
+    }
+
+    .product-time-sale {
+      position: relative;
+      padding: 12px;
+      font-weight: 700;
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: 1fr auto;
+      background-color: $color-star;
+
+      &__title {
+        display: grid;
+        grid-gap: 6px;
+        grid-template-columns: auto 1fr;
+      }
+
+      &__time {
+        display: grid;
+        grid-gap: 6px;
+        grid-template-columns: auto 1fr;
+      }
+
+      .link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .product-attributes {
+    margin-bottom: 30px;
+
+    .intro-box {
+      margin-bottom: 22px;
+    }
+
+    .intro-header {
+      margin-bottom: 16px;
+      font-size: 14px;
+
+      strong {
+        margin-right: 6px;
+      }
+    }
+
+    .intro-attr {
+      &__list {
+        display: flex;
+        grid-gap: 16px;
+
+        .color-inner {
+          position: relative;
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+          border-radius: 50%;
+
+          &:after {
+            position: absolute;
+            content: "";
+            top: -4px;
+            right: -4px;
+            left: -4px;
+            bottom: -4px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            @include transition()
+          }
+
+          &.active,
+          &:hover {
+            &:after {
+              border-color: #000000;
+            }
+          }
+        }
+
+        .size-inner {
+          padding: 4px 30px;
+          border: 1px dashed #e5e5e5;
+          border-radius: 25px;
+          cursor: pointer;
+          @include transition();
+
+          &.active,
+          &:hover {
+            border-color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  .cart {
+    &__quantity {
+      display: grid;
+      grid-gap: 12px;
+      @include flexbox();
+      @include align-items(center);
+
+      .product-quantity {
+        border: 1px solid #f6f6f6;
+        @include flexbox();
+
+        &__calc {
+          width: 26px;
+          height: 24px;
+          text-align: center;
+          line-height: 24px;
+          background-color: #f7f6f7;
+
+          i {
+            font-size: 18px;
+          }
+        }
+
+        .input-qty {
+          padding: 0;
+          border: 0;
+          width: 50px;
+          height: 24px;
+          text-align: center;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

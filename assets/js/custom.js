@@ -209,6 +209,60 @@
             });
         }
 
+        // product sale countdown
+        const productSaleCountdown = $('.product-sale-countdown');
+        if ( productSaleCountdown.length ) {
+            productSaleCountdown.each(function () {
+                const dataTime = $(this).data('time');
+
+                $(this).countdown(dataTime, function(event) {
+                    const totalHours = event.offset.totalDays * 24 + event.offset.hours;
+                    $(this).html(event.strftime(totalHours + 'h : %Mm : %Ss'));
+                });
+
+            })
+        }
+
+        /* Quantity  */
+        const productQuantity = $('.product-quantity');
+
+        if ( productQuantity.length ) {
+            let productInputQty = $('.product-quantity .input-qty');
+
+            productInputQty.keypress(function (event) {
+                if (event.which !== 8 && event.which !== 0 && event.which < 48 || event.which > 57) {
+                    return false;
+                }
+            });
+
+            $('.product-quantity__calc').on('click', function (event) {
+                event.preventDefault();
+
+                const hasClassAdd = $(this).hasClass('add');
+                const parentProductQuantity = $(this).closest('.product-quantity').find('.input-qty');
+                const valQuantity = parseInt( parentProductQuantity.val() );
+
+                if ( hasClassAdd ) {
+                    parentProductQuantity.val(valQuantity + 1);
+                } else {
+                    if ( valQuantity > 1 ) {
+                        parentProductQuantity.val(valQuantity - 1);
+                    } else {
+                        parentProductQuantity.val(1);
+                    }
+                }
+
+            })
+
+            productInputQty.keyup(function () {
+                const valQuantity = $(this).val();
+
+                if ( valQuantity < 1 ) {
+                    $(this).val(1);
+                }
+            });
+
+        }
     });
 
     // scroll event

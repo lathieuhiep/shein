@@ -169,25 +169,35 @@
     font-weight: 700;
   }
 
+  .currency {
+    position: absolute;
+    right: -10px;
+    text-decoration: underline;
+  }
+
   ins {
+    position: relative;
     font-weight: 700;
     color: #fa6338;
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
-    margin-right: 8px;
+    margin-right: 16px;
+
+    .currency {
+      top: 0;
+      font-size: 12px;
+    }
   }
 
   del {
-    font-size: 12px;
-    color: #999;
-  }
-
-  .currency {
     position: relative;
-    top: -2px;
-    font-size: 12px;
-    margin-left: 2px;
-    text-decoration: underline;
+    font-size: 14px;
+    color: #999;
+
+    .currency {
+      top: -3px;
+      font-size: 11px;
+    }
   }
 }
 
