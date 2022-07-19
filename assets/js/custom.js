@@ -263,6 +263,14 @@
             });
 
         }
+
+        /* select order */
+        $('.select-box__list li').on('click', function () {
+            const textSelect = $(this).text();
+
+            $(this).closest('.select-box').find('.text-input').text(textSelect);
+        })
+
     });
 
     // scroll event

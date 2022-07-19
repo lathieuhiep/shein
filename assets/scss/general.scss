@@ -281,10 +281,6 @@ sup {
   line-height: inherit;
 }
 
-.breadcrumb {
-  padding: 0 12px;
-}
-
 .back-top {
   position: fixed;
   right: 6px;
@@ -312,5 +308,50 @@ sup {
 
   i {
     font-size: 18px;
+  }
+}
+
+.navigation {
+  .total-page {
+    display: inline-block;
+    margin-right: 16px;
+    color: #959595;
+
+  }
+  .pagination {
+    margin: 0;
+
+    li {
+      margin: 0 6px;
+
+      a,span {
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: $color-title;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        @include transition();
+
+        &:hover,
+        &.active {
+          color: #ffffff;
+          background-color: #000000;
+        }
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      span {
+        font-size: 18px;
+      }
+    }
   }
 }

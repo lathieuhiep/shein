@@ -305,89 +305,75 @@
         }
       }
     }
+  }
+}
 
-    &__content {
-      .list-product {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(5, 1fr);
+.product-grid {
+  &__list {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+  }
 
-        .item {
-          .thumbnail {
-            margin-bottom: 12px;
-          }
+  .item {
+    .thumbnail {
+      position: relative;
+      margin-bottom: 12px;
 
-          .title-product {
-            font-size: 12px;
-          }
+      .upper {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        min-width: 50px;
+        padding: 2px 5px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #3cbd45;
 
-          .product-action-info {
-            display: grid;
-            grid-gap: 8px;
-            grid-template-columns: 1fr auto;
-
-            i {
-              font-size: 16px;
-              cursor: pointer;
-              @include transition();
-
-              &:hover {
-                color: #fa6338;
-              }
-            }
-          }
-
-          .price {
-            .amount {
-              font-weight: 700;
-            }
-          }
+        &.sale {
+          background-color: $background-primary;
         }
       }
+    }
 
-      .navigation {
-        .total-page {
-          display: inline-block;
-          margin-right: 16px;
-          color: #959595;
+    .title-product {
+      font-size: 12px;
+    }
 
+    .product-action-info {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: 1fr auto;
+
+      i {
+        font-size: 16px;
+        cursor: pointer;
+        @include transition();
+
+        &:hover {
+          color: #fa6338;
         }
-        .pagination {
-          margin: 0;
+      }
+    }
 
-          li {
-            margin: 0 6px;
+    .price {
+      .amount {
+        font-weight: 700;
+      }
+    }
+  }
 
-            a,span {
-              display: block;
-              cursor: pointer;
-              width: 24px;
-              height: 24px;
-              line-height: 24px;
-              text-align: center;
-              color: $color-title;
-              padding: 0;
-              border: 0;
-              border-radius: 50%;
-              @include transition();
+  .action-box {
+    .load-more {
+      display: inline-block;
+      padding: 8px 24px;
+      color: #ffffff;
+      font-weight: 700;
+      background-color: $background-primary;
 
-              &:hover,
-              &.active {
-                color: #ffffff;
-                background-color: #000000;
-              }
-            }
-
-            a {
-              font-size: 16px;
-              font-weight: 700;
-            }
-
-            span {
-              font-size: 18px;
-            }
-          }
-        }
+      &:hover {
+        color: #000000;
+        background-color: rgba(0, 0, 0, 0.2);
       }
     }
   }
