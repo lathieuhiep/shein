@@ -166,6 +166,7 @@
   }
 
   &__bottom {
+    position: relative;
     padding-left: 20px;
     padding-right: 20px;
     height: 54px;
@@ -182,9 +183,20 @@
         height: 100%;
 
         > ul {
+          height: 100%;
+          @include flexbox();
+
           > li {
+            height: 100%;
+
             > a {
               position: relative;
+              padding: 0 15px;
+              height: 100%;
+              font-size: 14px;
+              text-transform: uppercase;
+              @include flexbox();
+              @include align-items(center);
 
               &:after {
                 position: absolute;
@@ -198,35 +210,108 @@
                 background-color: $background-primary;
                 @include transition();
               }
+
+              &:hover {
+                a {
+                  color: #ed354b;
+
+                  &:after {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+                }
+              }
             }
 
             &:hover {
-              a {
-                color: #ed354b;
-
-                &:after {
-                  opacity: 1;
-                  visibility: visible;
-                }
+              .mega-menu {
+                opacity: 1;
+                visibility: visible;
               }
             }
           }
         }
 
         ul {
-          height: 100%;
-          @include flexbox();
-
           li {
-            height: 100%;
-
-            a {
-              padding: 0 15px;
-              height: 100%;
-              font-size: 14px;
-              text-transform: uppercase;
+            .mega-menu {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0;
+              z-index: 2;
+              opacity: 0;
+              visibility: hidden;
+              padding: 20px 0;
+              border-top: 1px solid rgba(0,0,0,.1);
+              background-color: #ffffff;
               @include flexbox();
-              @include align-items(center);
+              @include justify-content(center);
+              @include transition();
+
+              &__column {
+                position: relative;
+                padding: 0 10px;
+                @include flex(0 0 auto);
+
+                &:before {
+                  position: absolute;
+                  content: "";
+                  height: 100%;
+                  width: 1px;
+                  top: 0;
+                  opacity: 0;
+                  background-color: rgba(0,0,0,.06);
+                }
+
+                .title-menu {
+                  margin-top: 16px;
+                  margin-bottom: 8px;
+                  font-size: 12px;
+                  text-transform: uppercase;
+
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                }
+
+                ul {
+                  display: grid;
+                  grid-row-gap: 6px;
+
+                  li {
+                    font-size: 12px;
+                  }
+                }
+
+                .thumbnail {
+                  position: relative;
+                  display: inline-block;
+                  width: 240px;
+
+                  a {
+                    display: block;
+                  }
+                }
+
+                &.left-image {
+                  padding-left: 15px;
+
+                  &:before {
+                    left: 0;
+                    opacity: 1;
+                  }
+                }
+
+                &.right-image {
+                  padding-right: 15px;
+
+                  &:before {
+                    right: 0;
+                    opacity: 1;
+                  }
+                }
+              }
             }
           }
         }
