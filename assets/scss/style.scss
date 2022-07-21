@@ -17,6 +17,8 @@ Description: EdenLuxuryDesign HTML
  ## Banner
  ## Product Category
  ## Product Sale
+# Page
+  ## Login
 ## Page Product
   ## Product Category
 # Footer
@@ -42,6 +44,11 @@ Description: EdenLuxuryDesign HTML
 @import "element/event";
 @import "element/product-cate";
 @import "element/product-sale";
+
+/**
+# Page
+-----------------------------------------------------------------------------*/
+@import "page/login";
 
 /**
 # Page Product

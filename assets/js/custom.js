@@ -271,6 +271,19 @@
             $(this).closest('.select-box').find('.text-input').text(textSelect);
         })
 
+        /* show form forget password */
+        $('.forget-password').on('click', function (e) {
+            e.preventDefault();
+
+            $(this).closest('.template-login').find('.login-content').addClass('d-none');
+            $(this).closest('.template-login').find('.forget-content').removeClass('d-none');
+        })
+
+        $('.btn-cancel-forget').on('click', function () {
+            $(this).closest('.template-login').find('.login-content').removeClass('d-none');
+            $(this).closest('.template-login').find('.forget-content').addClass('d-none');
+        })
+
     });
 
     // scroll event
